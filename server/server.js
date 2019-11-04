@@ -4,14 +4,6 @@ var bodyParser = require('body-parser');
 var {mongoose} = require('./db/mongoose');
 var {Todo} = require('./models/todo');
 var {User} = require('./models/user');
-// var otherTodo = new Todo({
-//     text :true
-// });
-// otherTodo.save().then((doc)=>{
-//     console.log(JSON.stringify(doc,undefined,2));
-// },(e)=>{
-//     console.log('unable to save',e);
-// })
 var app = express();
 app.use(bodyParser.json());
 app.post('/todos',(req,res)=>{
